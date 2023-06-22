@@ -44,10 +44,9 @@ select{
 
 h1 {
     text-align: center;
-    font-size: 25px;
     /* width: 100px; */
     font-family: 'GS';
-    font-size: 32px;
+    font-size: 36px;
     color: var(--accent);
 }
 
@@ -61,6 +60,7 @@ h4{
 
 label {
     font-weight: bold;
+    color: var(--accent);
 }
 
 #recipe-details {
@@ -70,6 +70,7 @@ label {
     background-color: var(--secondary);
     font-family: 'Satoshi';
     color: var(--bg);
+    font-size: 25px;
 }
 
 button{
@@ -113,4 +114,19 @@ button{
 
 .visible{
     display:block;
+}
+
+.selected{
+    background-color: var(--bg);
+    color: var(--accent);
+}
+
+.title{
+    background-color: var(--bg);
+    color:var(--accent);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 27px;
+    /* border: 8px solid var(--accent); */
 }
