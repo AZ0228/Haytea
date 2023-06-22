@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+    <section>
+        <h1>haytea</h1>
+        <div id="recipe-details">
+            <!-- Recipe details will be dynamically populated here -->
+        </div>
+        <div class="container">
+            <div class="dropdown">
+                <button onclick="toggleDrop(this)"><h3>milk teas</h3></button>
+                <div class="options">
+                    <div class="option" onclick="loadRecipe('classic')"><h4>b1 signature milk tea</h4></div>
+                    <div class="option"><h4>b1 signature milk tea</h4></div>
+                    <div class="option"><h4>b1 signature milk tea</h4></div>
+                    <div class="option"><h4>b1 signature milk tea</h4></div>
+                    <div class="option"><h4>b1 signature milk tea</h4></div>
+
+                </div>
+            </div>
+            <!--
+
+                <select id="recipe-select" onchange="loadRecipe()">
+                    <option value="">-- Select a Recipe --</option>
+                    <option value="classic">Classic Boba Tea</option>
+                    <option value="taro">Taro Milk Tea</option>
+                    Add more recipe options here
+                </select>
+            -->
+            <div class="dropdown">
+                <button onclick="toggleDrop(this)"><h3>fruit teas</h3></button>
+                <div class="options">
+                    <div class="option"><h4>B1 Signature Milk Tea</h4></div>
+                    <div class="option"><h4>B1 Signature Milk Tea</h4></div>
+                    <div class="option"><h4>B1 Signature Milk Tea</h4></div>
+                    <div class="option"><h4>B1 Signature Milk Tea</h4></div>
+                    <div class="option"><h4>B1 Signature Milk Tea</h4></div>
+
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggleDrop(this)"><h3>slush</h3></button>
+                <div class="options">
+                    <div class="option"><h4>B1 Signature Milk Tea</h4></div>
+                    <div class="option"><h4>B1 Signature Milk Tea</h4></div>
+                    <div class="option"><h4>B1 Signature Milk Tea</h4></div>
+                    <div class="option"><h4>B1 Signature Milk Tea</h4></div>
+                    <div class="option"><h4>B1 Signature Milk Tea</h4></div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
