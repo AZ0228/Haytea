@@ -453,6 +453,8 @@ function toggle(element){
 let total = 0;
 
 function calculate(){
+    let done = false;
+    let filled = 0;
     let inputs = document.querySelectorAll('input');
     let total = 0;
     inputs.forEach((input)=>{
@@ -461,10 +463,17 @@ function calculate(){
         if(input.value != ''){
             let amount = parseInt(input.value);
             total += (value * amount); 
+            filled +=1;
+        }
+        if(filled == 6){
+            toggle(input.parentNode.parentNode.parentNode.parentNode);
+            done = true;
         }
     });
     let totalElement = document.querySelector('#total');
     totalElement.textContent = '$' + total.toString();
+    if(done){ totalElement.style.color = 'var(--accent)'; }
+
 }
 
 document.addEventListener('DOMContentLoaded', function() {
