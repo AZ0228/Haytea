@@ -269,7 +269,7 @@ const recipes = {
 
     },
 
-    d1:{
+    d8:{
         name: 'hey lemon tea',
         heylemon: 300,
         sugar: 70,
