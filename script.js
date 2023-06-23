@@ -109,6 +109,45 @@ const recipes = {
         instructions: 'fill with ice, thai tea until hay tea logo is covered, fill to top with half n half',
     },
 
+    b13:{
+        name: 'taro milk tea',
+        hwater: 100,
+        sugar: 20,
+        taropowder: '1 spoon',
+        instructions: 'after whisking, fill shaker completely full with ice, then completely fill with milk, shake, make sure to put fresh taro around cup',
+    },
+
+    b15:{
+        name: 'happy family',
+        instructions: 'either 200 ml milktea or 200 ml coconut milk',
+    },
+
+    b16:{
+        name: 'brown sugar milk tea',
+        instructions: 'brown sugar ring around cup, 30ml heavy cream on top'
+    },
+    
+    b17:{
+        name: 'high mountain milk tea',
+        hmtea: 200,
+        sugar: 25,
+        mtpowder: '1 spoon',
+    },
+
+    b18:{
+        name: "oolong milk tea",
+        oolongtea: 200,
+        sugar: 25,
+        mtpowder: '1 spoon',
+    },
+
+    b19:{
+        name: 'four seasons milk tea',
+        fourseasontea: 200,
+        sugar: 25,
+        mtpowder: '1 spoon',
+    },
+
     h1:{
         name: 'mango dreamer slush',
         water: 100,
