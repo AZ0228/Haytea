@@ -427,3 +427,49 @@ function toggleDrop(element) {
         arrow.classList.add('up');
     }
 }
+
+function toggle(element){
+    let parent = element.parentNode.parentNode;
+    let number = parent.querySelector('#number');  
+    let numerator = parseInt(number.textContent[0]);  
+    let denominator = parseInt(number.textContent[2]);
+    if(element.classList.contains('selected')){
+        element.classList.remove('selected');
+        numerator -=1;
+    } else {
+        element.classList.add('selected');
+        numerator +=1;
+    }
+    if(numerator == denominator){
+        let button = parent.querySelector('button');
+        button.classList.add('done');
+    } else {
+        let button = parent.querySelector('button');
+        button.classList.remove('done');
+    }
+    number.textContent = numerator.toString()+'/'+ denominator.toString();
+}
+
+let total = 0;
+
+function calculate(){
+    let inputs = document.querySelectorAll('input');
+    let total = 0;
+    inputs.forEach((input)=>{
+        let parent = input.parentNode;
+        let value = parseInt(parent.textContent.slice(0,-1));
+        if(input.value != ''){
+            let amount = parseInt(input.value);
+            total += (value * amount); 
+        }
+    });
+    let totalElement = document.querySelector('#total');
+    totalElement.textContent = '$' + total.toString();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    let inputs = document.querySelectorAll('input');
+    inputs.forEach((input)=>{
+        input.addEventListener('input', calculate)
+    });
+})
