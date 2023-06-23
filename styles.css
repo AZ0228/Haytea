@@ -168,7 +168,8 @@ a{
 
 .label{
     color: var(--secondary);
-    font-size: 27px;
+    font-size: 32px;
+    margin-bottom:10px;
 }
 
 input{
@@ -182,6 +183,7 @@ input{
     font-size: 25px;
     font-weight: bold;
     width: 50px;
+    margin-left:5px;
 }
 
 .cash{
