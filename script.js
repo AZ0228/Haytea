@@ -71,14 +71,42 @@ const recipes = {
     b4:{
         name: 'coffee milk tea',
         coffee: '150 or over "hay tea logo"',
-        instructions: 'measure coffee, fill with ice, pour coffee, fill to top with half n half',
+        instructions: 'measure coffee, fill with ice, pour coffee, fill to top with milki',
     },
 
     b5:{
         name: 'milk tea with pudding and grass jelly',
         btea: 200,
         sugar: 25,
-        milk: '1 scoop',
+        toppings: 'grass jelly and pudding',
+    },
+
+    b6:{
+        name: 'jasmine milk tea',
+        jtea: 200,
+        sugar: 25,
+        syrup: 'jasmine 30',
+    },
+
+    b10:{
+        name: 'cake milk tea',
+        mtea: 200,
+        sugar: 25,
+        instructions: 'cream around the cup and on top of the tea, put brown sugar on top, use metal around the cup and torch, to turn on the torch, rotate knob left and press trigger, use from far away and make sure all sugar is melted',
+    },
+
+    b11:{
+        name: 'hk style milk tea',
+        hktea: 150,
+        sugar: 30,
+        evaporatedmilk: 100,
+    },
+
+    b12:{
+        name: 'thai milk tea',
+        thai: 200,
+        sugar: 50,
+        instructions: 'fill with ice, thai tea until hay tea logo is covered, fill to top with half n half',
     },
 
     h1:{
