@@ -466,7 +466,8 @@ function calculate(){
             filled +=1;
         }
         if(filled == 6){
-            toggle(input.parentNode.parentNode.parentNode.parentNode);
+            let drop = input.parentNode.parentNode.parentNode.parentNode
+            if(!drop.classList.contains('selected')){toggle(drop);}
             done = true;
         }
     });
