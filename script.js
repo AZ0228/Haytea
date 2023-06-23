@@ -450,7 +450,7 @@ function toggle(element){
     number.textContent = numerator.toString()+'/'+ denominator.toString();
 }
 
-let total = 0;
+let total = 1;
 
 function calculate(){
     let done = false;
