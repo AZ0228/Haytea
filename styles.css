@@ -168,6 +168,7 @@ a{
 
 .label{
     color: var(--secondary);
+    font-size: 27px;
 }
 
 input{
@@ -178,7 +179,7 @@ input{
     background-color: var(--secondary);
     padding: 3px;
     color: var(--accent);
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     width: 50px;
 }
