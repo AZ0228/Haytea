@@ -422,10 +422,8 @@ function toggleDrop(element) {
         drop.classList.add('visible')
     }
     if(arrow.classList.contains('up')){
-        console.log(1);
         arrow.classList.remove('up');
     } else {
-        console.log(2);
         arrow.classList.add('up');
     }
 }
