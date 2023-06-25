@@ -349,6 +349,14 @@ const recipes = {
         instructions: 'add 1 spoon of ice, 1.5 for large',
     },
 
+    gardenia:{
+        name: 'gardenia lime tea',
+        ice:400,
+        tea: 'gardenia 300 (1 spoon, use hot water and metal cup)',
+        sugar: '70',
+        instructions: 'crush ice with 6 limes, pour tea in, shake, pour all in cup'
+    },
+
     classic: {
         name: "Classic Boba Tea",
         milk: "150ml",
