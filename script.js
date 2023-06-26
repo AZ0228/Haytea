@@ -569,13 +569,17 @@ function date(){
 
 document.addEventListener('DOMContentLoaded', function() {
     let money = document.querySelector('.moneycontainer');
-    let inputs = money.querySelectorAll('input');
-    inputs.forEach((input)=>{
-        input.addEventListener('input', calculate)
-    });
+    if(money){
+        let inputs = money.querySelectorAll('input');
+        inputs.forEach((input)=>{
+            input.addEventListener('input', calculate)
+        });
+    }
 
     let tip = document.querySelector('.tip');
-    let rinputs = tip.querySelector('input');
-    rinputs.addEventListener('input',tips)
-    date();
+    if(tip){
+        let rinputs = tip.querySelector('input');
+        rinputs.addEventListener('input',tips)
+        date();
+    }
 });
