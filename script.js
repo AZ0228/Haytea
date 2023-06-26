@@ -463,8 +463,18 @@ let total = 1;
 function calculate(){
     let done = false;
     let filled = 0;
-    let inputs = document.querySelectorAll('input');
+    let drawer = document.querySelector('.drawer');
+    let inputs = drawer.querySelectorAll('input');
     let total = 0;
+    let sales = drawer.parentNode.querySelector('#cash-sale').value;
+    if(sales!=''){
+        sales=parseFloat(sales);
+        console.log(sales);
+    } else {
+        sales = 0;
+    }
+
+    console.log(drawer.parentNode.querySelector('#cash-sale').value);
     inputs.forEach((input)=>{
         let parent = input.parentNode;
         let value = parseInt(parent.textContent.slice(0,-1));
@@ -479,15 +489,92 @@ function calculate(){
             done = true;
         }
     });
+    total-=sales;
     let totalElement = document.querySelector('#total');
-    totalElement.textContent = '$' + total.toString();
-    if(done){ totalElement.style.color = 'var(--accent)'; }
+    totalElement.textContent = '$' + total.toFixed(2);
+    if(done){ 
+        totalElement.style.color = 'var(--accent)';
+        let cash = document.querySelector('#cash');
+        cash.textContent = 'cash:' + '$'+sales.toFixed(2);
+        let drawerCash = document.querySelector('#drawercash');
+        drawerCash.textContent = 'cash:' + '$'+total.toFixed(2);
+
+    }
+}
+
+function tips(){
+    let tip = document.querySelector('.tip');
+    let input = parseFloat(tip.querySelector('input').value);
+    let total = tip.querySelector('h1');
+    input = (input*0.95).toFixed(2);
+    total.textContent = input;
+    if(!tip.classList.contains('selected')){ toggle(tip); }
+    total.style.color = 'var(--accent)';
+    if(!tip.classList.contains('selected')){toggle(tip);}
+    let cardTips = document.querySelector('#cardtips');
+    cardTips.textContent = 'card tips:' + '$'+input;
 
 }
 
+function addOnline(){
+    console.log(document.querySelector('.online').value);
+    if(document .querySelector('.online').value == ''){return;}
+    let onlineOrders = document.querySelector('#online-orders');
+    let online = parseFloat(parseFloat(document.querySelector('.online').value).toFixed(2));
+    let div = document.createElement('h2');
+    let total = onlineOrders.parentNode.querySelector('#total');
+    let totalnum =parseFloat(total.textContent.slice(1));
+    console.log(total.textContent.slice(1));
+    totalnum += online; 
+    console.log(parseFloat(total.textContent.slice(1)));
+    div.classList.add('accent');
+    div.textContent = online.toFixed(2);
+    total.textContent = '$'+totalnum.toFixed(2);
+    total.style.color = 'var(--accent)';
+    onlineOrders.appendChild(div);
+    if(!onlineOrders.parentNode.classList.contains('selected')){toggle(onlineOrders.parentNode);}
+    let onlineOrder = document.querySelector('#onlineorder');
+    onlineOrder.textContent = 'online:' + '$'+totalnum.toFixed(2);
+}
+
+function subtractOnline(){
+    let onlineOrders = document.querySelector('#online-orders');
+    let online = parseFloat(onlineOrders.lastChild.textContent);
+    let total = onlineOrders.parentNode.querySelector('#total');
+    let totalnum = parseFloat(total.textContent.slice(1))-online;
+    total.textContent = '$'+totalnum.toFixed(2);
+    onlineOrders.removeChild(onlineOrders.lastChild);
+    let onlineOrder = document.querySelector('#onlineorder');
+    onlineOrder.textContent = 'online:' +'$'+totalnum.toFixed(2);
+
+}
+
+function date(){
+    var currentDate = new Date();
+    // Get the individual components of the date
+    var year = currentDate.getFullYear();
+    var month = currentDate.getMonth() + 1; // Month is zero-based, so we add 1
+    var day = currentDate.getDate();
+
+    // Format the date as a string (optional)
+    var formattedDate = month + '/' + day + '/' + year ;
+
+    // Output the current date
+    let dates = document.querySelectorAll('#date');
+    dates.forEach((date)=>{
+        date.innerHTML = formattedDate;
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-    let inputs = document.querySelectorAll('input');
+    let money = document.querySelector('.moneycontainer');
+    let inputs = money.querySelectorAll('input');
     inputs.forEach((input)=>{
         input.addEventListener('input', calculate)
     });
-})
+
+    let tip = document.querySelector('.tip');
+    let rinputs = tip.querySelector('input');
+    rinputs.addEventListener('input',tips)
+    date();
+});

@@ -10,15 +10,18 @@
     <section>
         <a href="index.html" class="back"><button><h3>back</h3></button></a>
         <div class="dropdown">
-            <button onclick="toggleDrop(this)" ><h3>cashier</h3><h3 id="number">0/7</h3><img src="chevron-down.svg" alt="" class="down"></button>
+            <button onclick="toggleDrop(this)" ><h3>cashier</h3><h3 id="number">0/11</h3><img src="chevron-down.svg" alt="" class="down"></button>
             <div class="options">
                 <div class="option" onclick="toggle(this)"><h4>1. refill before 9:00</h4></div>
                 <div class="option" onclick="toggle(this)"><h4>2. cashier -> credit card -> settle credit card debt</h4></div>
-                <div class="option" onclick="toggle(this)"><h4>3. cashier -> drawer closing -> ok -> ok -> print -> end shift (print again)</h4></div>
-                <div class="option" onclick="toggle(this)"><h4>4. count cash tips</h4></div>
+                <div class="option" onclick="toggle(this)"><h4>3. cashier -> drawer closing -> skip -> ok -> print -> end shift (print again, total 2 copies)</h4></div>
+                <div class="option" onclick="toggle(this)"><h4>4. staple credit card and drawer report</h4></div>
                 <div class="option cash" onclick="">
                     <h4>5. count drawer cash</h4>
                     <div class="moneycontainer">
+                        <img src="registercash.svg" alt="" class="receipt">
+                        <label for="cash" class="label">cash sales<input type="number" id="cash-sale"></label>
+
                         <div class="drawer">
                             <label for="100" class="label">100$<input type="number" id="100"></label>
                             <label for="50" class="label">50$<input type="number" id="50"></label>
@@ -28,10 +31,46 @@
                             <label for="1" class="label">1$<input type="number" id="1"></label>
                         </div>
                         <h1 id="total">$0</h1>
+                        <h2>keep in drawer</h2>
                     </div>
                 </div>
-                <div class="option" onclick="toggle(this)"><h4>6. wash tea containers</h4></div>
-                <div class="option" onclick="toggle(this)"><h4>7. turn off machines</h4></div>
+                <div class="option register tip" onclick="">
+                    <h4>6. card tips * 0.95</h4>
+                    <img src="registertip.svg" alt="" class="receipt">
+                    <label for="100" class="label">tips<input type="number" id="100"></label>
+                    <h1 id="total">$0</h1>
+                </div>
+                <div class="option register" onclick="">
+                    <h4>7. tally up online order</h4>
+                    
+                    <div class="top">
+                        <label for="100" class="label">order<input type="number" id="100" class="online"></label>
+                        <a id="add" onclick="addOnline()">+</a>
+                        <a id="clear" onclick="subtractOnline()">-</a>
+                    </div>
+                    <div id="online-orders"></div>
+
+                    <h1 id="total">$0</h1>
+                </div>
+                <div class="option register" onclick="toggle(this)">
+                    <h4>8. write this on piece of paper</h4>
+                    <div id="totals">
+                        <h2 id="date" class="accent"></h2>
+                        <h2 id="cash" class="accent"></h2>
+                        <h2 id="cardtips" class="accent"></h2>
+                        <h2 id="onlineorder" class="accent"></h2>
+                    </div>
+                    <div id="totals">
+                        <h2 id="date" class="accent"></h2>
+                        <h2 id="drawercash" class="accent"></h2>
+                    </div>
+                    <h2>(in drawer)</h2>
+
+                </div>
+                <div class="option" onclick="toggle(this)"><h4>8. count cash tips, label and put into tips bag</h4></div>
+
+                <div class="option" onclick="toggle(this)"><h4>10. wash tea containers</h4></div>
+                <div class="option" onclick="toggle(this)"><h4>11. turn off machines</h4></div>
 
             </div>
         </div>

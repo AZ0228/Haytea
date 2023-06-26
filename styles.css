@@ -17,6 +17,9 @@
     font-weight: normal;
 }
 
+.accent{
+    color:var(--accent);
+}
 
 .down{
     transition: all 0.3s;
@@ -199,6 +202,7 @@ input{
     margin-top: 30px;
 }
 
+.register,
 .moneycontainer{
     display:flex;
     justify-content: space-between;
@@ -206,6 +210,7 @@ input{
     align-items: center;
 }
 
+.register h1,
 .moneycontainer h1{
     color:var(--bg);
     text-align: center;
@@ -218,3 +223,53 @@ input{
 .container{
     margin-bottom: 50px;
 }
+
+#cash-sale{
+    /* border:2px solid var(--bg); */
+    box-sizing: border-box;
+    margin-left:20px;
+    width:70px;
+}
+
+.receipt{
+    width:100%;
+    margin:30px 0;
+    border-radius: 10px;
+    border: 5px solid var(--accent);
+}
+
+.register a{
+    border:5px solid var(--secondary);
+    padding:2px 12px;
+    border-radius: 10px;
+    font-size: 25px;
+    transition: all 0.3s;
+}
+
+.register a:active{
+    background-color: var(--secondary);
+    color: var(--accent);
+}
+
+.top{
+    margin-top:30px;
+}
+
+#totals,
+#online-orders{
+    background-color: var(--secondary);
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.online{
+    width: 60px;
+    margin-left: 20px;
+}
+
+h2{
+    margin:10px;
+}
+
