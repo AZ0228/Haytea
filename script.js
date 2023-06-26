@@ -439,8 +439,9 @@ function toggleDrop(element) {
 function toggle(element){
     let parent = element.parentNode.parentNode;
     let number = parent.querySelector('#number');  
-    let numerator = parseInt(number.textContent[0]);  
-    let denominator = parseInt(number.textContent[2]);
+    let numbers = number.textContent.split('/');
+    let numerator = parseInt(numbers[0]);
+    let denominator = parseInt(numbers[1]);
     if(element.classList.contains('selected')){
         element.classList.remove('selected');
         numerator -=1;
@@ -507,7 +508,7 @@ function tips(){
     let input = parseFloat(tip.querySelector('input').value);
     let total = tip.querySelector('h1');
     input = (input*0.95).toFixed(2);
-    total.textContent = input;
+    total.textContent = '$' + input;
     if(!tip.classList.contains('selected')){ toggle(tip); }
     total.style.color = 'var(--accent)';
     if(!tip.classList.contains('selected')){toggle(tip);}
