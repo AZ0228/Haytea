@@ -484,22 +484,18 @@ function calculate(){
             total += (value * amount); 
             filled +=1;
         }
-        if(filled == 6){
-            let drop = input.parentNode.parentNode.parentNode.parentNode
-            if(!drop.classList.contains('selected')){
-                toggle(drop);
-            }
-            done = true;
+        let drop = input.parentNode.parentNode.parentNode.parentNode
+        if(!drop.classList.contains('selected')){
+            toggle(drop);
         }
     });
     let totalElement = document.querySelector('#total');
     totalElement.textContent = '$' + total.toFixed(2);
-    if(done){ 
-        totalElement.style.color = 'var(--accent)';
-        let cash = document.querySelector('#cash');
-        cash.textContent = 'cash:' + '$'+sales.toFixed(2);
+    totalElement.style.color = 'var(--accent)';
+    let cash = document.querySelector('#cash');
+    cash.textContent = 'cash:' + '$'+sales.toFixed(2);
 
-    }
+    
 }
 
 function tips(){
