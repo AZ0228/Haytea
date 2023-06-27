@@ -275,3 +275,18 @@ h2{
     margin:10px;
 }
 
+.calctotal{
+    width:80%;
+    background-color: var(--secondary);
+    color: var(--accent);
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 5px;
+    transition: all 0.5s;
+}
+
+.calctotal:active{
+    background-color: var(--accent);
+    color: var(--secondary);
+}

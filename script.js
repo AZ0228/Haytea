@@ -486,19 +486,18 @@ function calculate(){
         }
         if(filled == 6){
             let drop = input.parentNode.parentNode.parentNode.parentNode
-            if(!drop.classList.contains('selected')){toggle(drop);}
+            if(!drop.classList.contains('selected')){
+                toggle(drop);
+            }
             done = true;
         }
     });
-    total-=sales;
     let totalElement = document.querySelector('#total');
     totalElement.textContent = '$' + total.toFixed(2);
     if(done){ 
         totalElement.style.color = 'var(--accent)';
         let cash = document.querySelector('#cash');
         cash.textContent = 'cash:' + '$'+sales.toFixed(2);
-        let drawerCash = document.querySelector('#drawercash');
-        drawerCash.textContent = 'cash:' + '$'+total.toFixed(2);
 
     }
 }
@@ -509,9 +508,10 @@ function tips(){
     let total = tip.querySelector('h1');
     input = (input*0.95).toFixed(2);
     total.textContent = '$' + input;
-    if(!tip.classList.contains('selected')){ toggle(tip); }
+    if(!tip.classList.contains('selected')){ 
+        toggle(tip);
+    }
     total.style.color = 'var(--accent)';
-    if(!tip.classList.contains('selected')){toggle(tip);}
     let cardTips = document.querySelector('#cardtips');
     cardTips.textContent = 'card tips:' + '$'+input;
 
@@ -533,8 +533,11 @@ function addOnline(){
     total.textContent = '$'+totalnum.toFixed(2);
     total.style.color = 'var(--accent)';
     onlineOrders.appendChild(div);
-    if(!onlineOrders.parentNode.classList.contains('selected')){toggle(onlineOrders.parentNode);}
+    if(!onlineOrders.parentNode.classList.contains('selected')){
+        toggle(onlineOrders.parentNode);
+    }
     let onlineOrder = document.querySelector('#onlineorder');
+    document.querySelector('.online').value = '';
     onlineOrder.textContent = 'online:' + '$'+totalnum.toFixed(2);
 }
 
@@ -567,6 +570,33 @@ function date(){
     });
 }
 
+function calculateTotals(element){
+    console.log(1);
+    let totals = document.querySelector('#totals');
+    let total = 0;
+    let cash = totals.querySelector('#cash');
+    let tips = totals.querySelector('#cardtips');
+    let onlineorder = totals.querySelector('#onlineorder');
+    if(cash.textContent!=''){
+        total += parseFloat(cash.textContent.split('$')[1]);
+        if(tips.textContent!=''){
+            total -= parseFloat(tips.textContent.split('$')[1]);
+        }
+        if(onlineorder.textContent!=''){
+            total -= parseFloat(onlineorder.textContent.split('$')[1]);
+        }
+    }
+    let cashsale = document.querySelector('#cashsale');
+    cashsale.textContent = 'total: ' + total.toFixed(2);
+    if(!element.classList.contains('selected')){ toggle(element); }
+    let totalcash = parseInt(document.querySelector('#total').textContent.slice(1));
+    let drawerCash = document.querySelector('#drawercash');
+    let difference = totalcash-total
+    drawerCash.textContent = 'cash:' + '$'+difference.toFixed(2);
+
+    
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     let money = document.querySelector('.moneycontainer');
     if(money){
@@ -582,4 +612,6 @@ document.addEventListener('DOMContentLoaded', function() {
         rinputs.addEventListener('input',tips)
         date();
     }
+    let totals = document.querySelector('#totals');
+    totals.addEventListener('change',calculateTotals)
 });

@@ -31,7 +31,7 @@
                             <label for="1" class="label">1$<input type="number" id="1"></label>
                         </div>
                         <h1 id="total">$0</h1>
-                        <h2>keep in drawer</h2>
+                        <h2>cash in drawer</h2>
                     </div>
                 </div>
                 <div class="option register tip" onclick="">
@@ -52,13 +52,15 @@
 
                     <h1 id="total">$0</h1>
                 </div>
-                <div class="option register" onclick="toggle(this)">
+                <div class="option register" onclick="">
                     <h4>8. write this on piece of paper</h4>
+                    <button onclick="calculateTotals(this.parentNode)" class="calctotal">press to calculate totals</button>
                     <div id="totals">
                         <h2 id="date" class="accent"></h2>
                         <h2 id="cash" class="accent"></h2>
                         <h2 id="cardtips" class="accent"></h2>
                         <h2 id="onlineorder" class="accent"></h2>
+                        <h2 id="cashsale" class="top accent"></h2>
                     </div>
                     <div id="totals">
                         <h2 id="date" class="accent"></h2>
