@@ -357,19 +357,27 @@ const recipes = {
         instructions: 'crush ice with 6 limes, pour tea in, shake, pour all in cup'
     },
 
-    classic: {
-        name: "Classic Boba Tea",
-        milk: "150ml",
-        tea: "30ml",
-        sugar: "20g",
-        boba: "60g",
+
+    coconutredbean:{
+        name: 'coconut red bean smoothie',
+        coconutmilk: 100,
+        water: 50,
+        sugar: 20,
+        redbean: '1.5 spoons',
+        coconut: '4 spoons',
+        ice: '1 spoon of ice, 1.5 for large',
     },
-    taro: {
-        name: "Taro Milk Tea",
-        milk: "200ml",
-        tea: "20ml",
-        sugar: "30g",
-        boba: "50g",
+
+    matcha:{
+        name: 'matcha refill',
+        instructions:'first, in blender, tare on scale and pour 400g matcha powder from silver bag, 30g from paper bag, and add 500ml hot water. blend until smooth, meanwhile fill refill container with 1500ml hot water. Once blended, pour blender mixture into refill container and mix well'
+    },
+
+    coconutmilk:{
+        name: 'coconut milk refill',
+        hotwater:1500,
+        coconutpowder: 420,
+        instructions: 'mix',
     },
 };
 
@@ -462,20 +470,22 @@ function toggle(element){
 let total = 1;
 
 function calculate(){
-    let done = false;
     let filled = 0;
     let drawer = document.querySelector('.drawer');
     let inputs = drawer.querySelectorAll('input');
     let total = 0;
-    let sales = drawer.parentNode.querySelector('#cash-sale').value;
+    let sales = document.querySelector('#cash-sale').value;
     if(sales!=''){
         sales=parseFloat(sales);
         console.log(sales);
+        let drop = document.querySelector('#cash-sale').parentNode.parentNode;
+        if(!drop.classList.contains('selected')){
+            toggle(drop);
+        }
     } else {
         sales = 0;
     }
 
-    console.log(drawer.parentNode.querySelector('#cash-sale').value);
     inputs.forEach((input)=>{
         let parent = input.parentNode;
         let value = parseInt(parent.textContent.slice(0,-1));
@@ -483,19 +493,18 @@ function calculate(){
             let amount = parseInt(input.value);
             total += (value * amount); 
             filled +=1;
+            let drop = input.parentNode.parentNode.parentNode.parentNode
+            if(!drop.classList.contains('selected')){
+                toggle(drop);
+            }
         }
-        let drop = input.parentNode.parentNode.parentNode.parentNode
-        if(!drop.classList.contains('selected')){
-            toggle(drop);
-        }
+
     });
     let totalElement = document.querySelector('#total');
     totalElement.textContent = '$' + total.toFixed(2);
     totalElement.style.color = 'var(--accent)';
     let cash = document.querySelector('#cash');
     cash.textContent = 'cash:' + '$'+sales.toFixed(2);
-
-    
 }
 
 function tips(){
@@ -566,13 +575,24 @@ function date(){
     });
 }
 
+function purchase(){
+    let purchase = document.querySelector('#shop-purchases');
+    let input = parseFloat(purchase.value);
+    input = (input).toFixed(2);
+    if(!purchase.parentNode.classList.contains('selected')){ 
+        toggle(purchase.parentNode);
+    }
+    let purchases = document.querySelector('#purchases');
+    purchases.textContent = 'purchases:' + '$'+input;
+}
+
 function calculateTotals(element){
-    console.log(1);
     let totals = document.querySelector('#totals');
     let total = 0;
     let cash = totals.querySelector('#cash');
     let tips = totals.querySelector('#cardtips');
     let onlineorder = totals.querySelector('#onlineorder');
+    let purchase = totals.querySelector('#purchases');
     if(cash.textContent!=''){
         total += parseFloat(cash.textContent.split('$')[1]);
         if(tips.textContent!=''){
@@ -580,6 +600,9 @@ function calculateTotals(element){
         }
         if(onlineorder.textContent!=''){
             total -= parseFloat(onlineorder.textContent.split('$')[1]);
+        }
+        if(purchase.textContent!=''){
+            total -= parseFloat(purchase.textContent.split('$')[1]);
         }
     }
     let cashsale = document.querySelector('#cashsale');
@@ -589,7 +612,6 @@ function calculateTotals(element){
     let drawerCash = document.querySelector('#drawercash');
     let difference = totalcash-total
     drawerCash.textContent = 'cash:' + '$'+difference.toFixed(2);
-
     
 }
 
@@ -600,6 +622,16 @@ document.addEventListener('DOMContentLoaded', function() {
         inputs.forEach((input)=>{
             input.addEventListener('input', calculate)
         });
+    }
+
+    let purchase1 = document.querySelector('#shop-purchases');
+    if(purchase1){
+        purchase1.addEventListener('input',purchase);
+    }
+
+    let cashsale = document.querySelector('#cash-sale');
+    if(cashsale){
+        cashsale.addEventListener('input',calculate);
     }
 
     let tip = document.querySelector('.tip');
