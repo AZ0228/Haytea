@@ -368,19 +368,16 @@ const recipes = {
         ice: '1 spoon of ice, 1.5 for large',
     },
 
-    classic: {
-        name: "Classic Boba Tea",
-        milk: "150ml",
-        tea: "30ml",
-        sugar: "20g",
-        boba: "60g",
+    matcha:{
+        name: 'matcha refill',
+        instructions:'first, in blender, tare on scale and pour 400g matcha powder from silver bag, 30g from paper bag, and add 500ml hot water. blend until smooth, meanwhile fill refill container with 1500ml hot water. Once blended, pour blender mixture into refill container and mix well'
     },
-    taro: {
-        name: "Taro Milk Tea",
-        milk: "200ml",
-        tea: "20ml",
-        sugar: "30g",
-        boba: "50g",
+
+    coconutmilk:{
+        name: 'coconut milk refill',
+        hotwater:1500,
+        coconutpowder: 420,
+        instructions: 'mix',
     },
 };
 

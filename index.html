@@ -14,6 +14,7 @@
         <h1>haytea</h1>
         <div id="recipe-details">
             <!-- Recipe details will be dynamically populated here -->
+            choose a recipe below
         </div>
         <div class="container">
             <div class="dropdown">
@@ -91,6 +92,13 @@
                 <div class="options">
                     <div class="option" onclick="loadRecipe(this,'gardenia')"><h4>gardenia lime</h4></div>
                     <div class="option" onclick="loadRecipe(this,'coconutredbean')"><h4>coconut red bean smoothie</h4></div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggleDrop(this)"><h3>refills</h3><img src="chevron-down.svg" alt="" class="down"></button>
+                <div class="options">
+                    <div class="option" onclick="loadRecipe(this,'matcha')"><h4>matcha</h4></div>
+                    <div class="option" onclick="loadRecipe(this,'coconutmilk')"><h4>coconut milk</h4></div>
                 </div>
             </div>
 
