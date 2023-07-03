@@ -379,6 +379,20 @@ const recipes = {
         coconutpowder: 420,
         instructions: 'mix',
     },
+
+    saltedcheese:{
+        name: 'salted cheese refill',
+        instructions:'in blender, blend till smooth:',
+        creamcheese: '1 block',
+        hotwater: '100g',
+        seasalt: '5g',
+        milk: '100g',
+        mixerinstructions: 'in mixer, start on lowest setting and move to top setting over the course of 30 seconds, then go down to 4th level for a minute',
+        heavycream: '400g',
+        cheesepowder: '100g',
+        blendermix: 'pour into mixer'
+
+    }
 };
 
 // Function to load and display the selected recipe
