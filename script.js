@@ -14,8 +14,7 @@ const recipes = {
 
     a2:{
         name: 'jasmine green tea sc',
-        jtea: 150,
-        gtea: 150,
+        gtea: 300,
         jasmine: 30,
         toppings: 'salted cheese',
     },
