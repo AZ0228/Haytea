@@ -126,7 +126,7 @@ const recipes = {
 
     b13:{
         name: 'taro milk tea',
-        hwater: 100,
+        btea: 100,
         sugar: 20,
         taropowder: '1 spoon',
         instructions: 'after whisking, fill shaker completely full with ice, then completely fill with milk, shake, make sure to put fresh taro around cup',
