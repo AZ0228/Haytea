@@ -63,13 +63,20 @@
                     <input class="top" type="number" id="shop-purchases">
 
                 </div>
+                <div class="option" onclick="toggle(this)">
+                    <h4>10. count cash tips</h4>
+                    <input class="top" type="number" id="cash-tip">
+
+                </div>
+
                 <div class="option register" onclick="">
-                    <h4>10. press calculate and write on piece of paper</h4>
+                    <h4>11. press calculate and write on piece of paper</h4>
                     <button onclick="calculateTotals(this.parentNode)" class="calctotal">press to calculate totals</button>
                     <div id="totals">
                         <h2 id="date" class="accent"></h2>
                         <h2 id="cash" class="accent"></h2>
                         <h2 id="cardtips" class="accent"></h2>
+                        <h2 id="cashtips" class="accent"></h2>
                         <h2 id="onlineorder" class="accent"></h2>
                         <h2 id="purchases" class="accent"></h2>
                         <h2 id="cashsale" class="top accent"></h2>
@@ -81,7 +88,6 @@
                     <h2>(in drawer)</h2>
 
                 </div>
-                <div class="option" onclick="toggle(this)"><h4>11. count cash tips, label and put into tips bag</h4></div>
 
                 <div class="option" onclick="toggle(this)"><h4>12. wash tea containers</h4></div>
                 <div class="option" onclick="toggle(this)"><h4>13. turn off machines</h4></div>
