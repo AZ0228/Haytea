@@ -606,6 +606,7 @@ function calculateTotals(element){
     let tips = totals.querySelector('#cardtips');
     let onlineorder = totals.querySelector('#onlineorder');
     let purchase = totals.querySelector('#purchases');
+    let cashtips = totals.querySelector('#cashtips');
     if(cash.textContent!=''){
         total += parseFloat(cash.textContent.split('$')[1]);
         if(tips.textContent!=''){
@@ -617,6 +618,9 @@ function calculateTotals(element){
         if(purchase.textContent!=''){
             total -= parseFloat(purchase.textContent.split('$')[1]);
         }
+        if(cashtips.textContent!=''){
+            total -= parseFloat(cashtips.textContent.split('$')[1]);
+        }
     }
     let cashsale = document.querySelector('#cashsale');
     cashsale.textContent = 'total: ' + total.toFixed(2);
@@ -626,6 +630,13 @@ function calculateTotals(element){
     let difference = totalcash-total
     drawerCash.textContent = 'cash:' + '$'+difference.toFixed(2);
     
+}
+
+function cashTip(){
+    let cashtip = document.querySelector('#cash-tip');
+    let cashTipVal = parseInt(cashtip.value);
+    let cashTipTotal = document.querySelector('#cashtips');
+    cashTipTotal.textContent = 'cash tips: $' + cashTipVal.toFixed(2);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -655,4 +666,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     let totals = document.querySelector('#totals');
     totals.addEventListener('change',calculateTotals);
+    let cashtip = document.querySelector('#cash-tip');
+    if(cashtip){
+        cashtip.addEventListener('input',cashTip);
+    }
 });
