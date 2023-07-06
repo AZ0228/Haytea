@@ -654,5 +654,5 @@ document.addEventListener('DOMContentLoaded', function() {
         date();
     }
     let totals = document.querySelector('#totals');
-    totals.addEventListener('change',calculateTotals)
+    totals.addEventListener('change',calculateTotals);
 });
