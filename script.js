@@ -530,8 +530,10 @@ function tips(){
         toggle(tip);
     }
     total.style.color = 'var(--accent)';
-    let cardTips = document.querySelector('#cardtips');
-    cardTips.textContent = 'card tips:' + '$'+input;
+    let cardTips = document.querySelectorAll('.cardtips');
+    cardTips.forEach((cardtip)=>{
+        cardtip.textContent = 'card tips:' + '$'+input;
+    });
 
 }
 
@@ -640,6 +642,19 @@ function cashTip(){
     cashTipTotal.forEach((cashTipTotal)=>{
         cashTipTotal.textContent = 'cash tips: $' + cashTipVal.toFixed(2);
     });
+    checkTip();
+}
+
+function checkTip(){
+    let tipTotals = document.getElementById('tiptotals');
+    let card = tipTotals.querySelector('.cardtips');
+    let cash = tipTotals.querySelector('.cashtips');
+    if(!cash.textContent=='' && !card.textContent==''){
+        let total = parseFloat(cash.textContent.split('$')[1])+parseFloat(card.textContent.split('$')[1]);
+        let totals = document.getElementById('totals1');
+        totals.textContent = 'total tips: $'+total.toFixed(2);
+    }
+
 }
 
 document.addEventListener('DOMContentLoaded', function() {
