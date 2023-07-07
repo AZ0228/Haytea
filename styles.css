@@ -258,7 +258,8 @@ input{
 }
 
 #totals,
-#online-orders{
+#online-orders,
+#tiptotals{
     background-color: var(--secondary);
     width: 80%;
     padding: 15px;
