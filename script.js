@@ -605,10 +605,10 @@ function calculateTotals(element){
     let totals = document.querySelector('#totals');
     let total = 0;
     let cash = totals.querySelector('#cash');
-    let tips = totals.querySelector('#cardtips');
+    let tips = totals.querySelector('.cardtips');
     let onlineorder = totals.querySelector('#onlineorder');
     let purchase = totals.querySelector('#purchases');
-    let cashtips = totals.getElementById('.cashtips');
+    let cashtips = totals.querySelector('.cashtips');
     if(cash.textContent!=''){
         total += parseFloat(cash.textContent.split('$')[1]);
         if(tips.textContent!=''){
@@ -625,12 +625,12 @@ function calculateTotals(element){
         }
     }
     let cashsale = document.querySelector('#cashsale');
-    cashsale.textContent = 'total: ' + total.toFixed(2);
+    cashsale.textContent = 'total: ' + '$' + Math.floor(total.toFixed(2))+ ' ($'+ total.toFixed(2)+ ')';
     if(!element.classList.contains('selected')){ toggle(element); }
     let totalcash = parseInt(document.querySelector('#total').textContent.slice(1));
     let drawerCash = document.querySelector('#drawercash');
     let difference = totalcash-total
-    drawerCash.textContent = 'cash:' + '$'+difference.toFixed(2);
+    drawerCash.textContent = 'cash: ' + '$' + Math.ceil(difference.toFixed(2)) + ' ($'+ difference.toFixed(2)+')';
     
 
 }    
