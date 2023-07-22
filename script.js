@@ -165,12 +165,11 @@ const recipes = {
 
     b21:{
         name: 'barbie drink',
-        gtea:50,
-        strawberry:50,
+        gtea:200,
+        wholemilk:100,
+        yogurt:20,
         cranberry:50,
-        wholemilk:50,
-        condensedmilk: 20,
-        sugarL:30
+        instructions: "crush a whole strawberry in cup before pouring drink"
     },
 
     c1:{
@@ -357,6 +356,13 @@ const recipes = {
         tiramisupowder: '6 spoons',
         instructions: 'add 1 spoon of ice, 1.5 for large',
     },
+    
+    h12:{
+        name:'strawvberry cranberry smoothie',
+        gtea:50,
+        wholemilk:50,
+        condensedmilk:20
+    }
 
     gardenia:{
         name: 'gardenia lime tea',
