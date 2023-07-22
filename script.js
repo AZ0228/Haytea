@@ -388,7 +388,7 @@ const recipes = {
         condensedmilk:20,
         strawberry:25,
         cranberry:25,
-        sygar:30,
+        sugar:30,
     },
 
     h13:{
