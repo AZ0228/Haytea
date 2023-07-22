@@ -163,6 +163,16 @@ const recipes = {
         mtpowder: '1 spoon',
     },
 
+    b21:{
+        name: 'barbie drink',
+        gtea:50,
+        strawberry:50,
+        cranberry:50,
+        wholemilk:50,
+        condensedmilk: 20,
+        sugarL:30
+    },
+
     c1:{
         name: 'passion yakult',
         gtea: 300,
