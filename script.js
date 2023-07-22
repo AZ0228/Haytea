@@ -174,6 +174,11 @@ const recipes = {
         mtpowder: '1 spoon',
     },
 
+    b20:{
+        name:'dragon milk tea',
+        instructions:'b1 with dragon boba'
+    },
+
     b21:{
         name: 'barbie drink',
         gtea:200,
@@ -365,6 +370,13 @@ const recipes = {
         heavycream: 150,
         sugar: 20,
         tiramisupowder: '6 spoons',
+        instructions: 'add 1 spoon of ice, 1.5 for large',
+    },
+
+    h11:{
+        name: 'passion fruit slush',
+        passionslush: 50,
+        sugar: 30,
         instructions: 'add 1 spoon of ice, 1.5 for large',
     },
     
