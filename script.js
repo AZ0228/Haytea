@@ -33,18 +33,29 @@ const recipes = {
         toppings: 'salted cheese',
     },
 
-    a5:{
-        name: 'alishan green tea sc',
-        alishantea: 300,
-        sugar: 30,
-        toppings: 'salted cheese',
-    },
 
-    a6:{
+    a5:{
         name: 'high mountain sc',
         highmountain: 300,
         sugar: 35,
         toppings: 'salted cheese',
+    },
+
+    a6:{
+        name: 'strawberry salted cheese',
+        gtea:250,
+        strawberry:50,
+        sugar:30,
+        instructions: 'blender 5 seconds',
+    },
+
+    a7:{
+        name: 'blueberry salted cheese',
+        gtea:250,
+        blueberry:50,
+        sugar:30,
+        drycranberry: 'half spoon',
+        instructions: 'blender 5 seconds',
     },
 
     b1:{
@@ -161,6 +172,15 @@ const recipes = {
         fourseasontea: 200,
         sugar: 25,
         mtpowder: '1 spoon',
+    },
+
+    b21:{
+        name: 'barbie drink',
+        gtea:200,
+        wholemilk:100,
+        yogurt:20,
+        cranberry:50,
+        instructions: "crush a whole strawberry in cup before pouring drink"
     },
 
     c1:{
@@ -345,6 +365,25 @@ const recipes = {
         heavycream: 150,
         sugar: 20,
         tiramisupowder: '6 spoons',
+        instructions: 'add 1 spoon of ice, 1.5 for large',
+    },
+    
+    h12:{
+        name:'strawberry cranberry smoothie',
+        gtea:50,
+        wholemilk:50,
+        condensedmilk:20,
+        strawberry:25,
+        cranberry:25,
+        sygar:30,
+    },
+
+    h13:{
+        name: "blueberry smoothie",
+        gtea:50,
+        wholemilk:50,
+        blueberry:50,
+        sugar:30,
         instructions: 'add 1 spoon of ice, 1.5 for large',
     },
 
