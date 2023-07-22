@@ -185,6 +185,7 @@ const recipes = {
         wholemilk:100,
         yogurt:20,
         cranberry:50,
+        sugar:20,
         instructions: "crush a whole strawberry in cup before pouring drink"
     },
 
