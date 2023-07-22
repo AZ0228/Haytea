@@ -361,8 +361,20 @@ const recipes = {
         name:'strawvberry cranberry smoothie',
         gtea:50,
         wholemilk:50,
-        condensedmilk:20
-    }
+        condensedmilk:20,
+        strawberry:25,
+        cranberry:25,
+        sygar:30,
+    },
+
+    h13:{
+        name: "blueberry smoothie",
+        gtea:50,
+        wholemilk:50,
+        blueberry:50,
+        sugar:30,
+        instructions: 'add 1 spoon of ice, 1.5 for large',
+    },
 
     gardenia:{
         name: 'gardenia lime tea',
