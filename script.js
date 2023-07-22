@@ -394,6 +394,8 @@ const recipes = {
         name: "blueberry smoothie",
         gtea:50,
         wholemilk:50,
+        condensedmilk:20,
+        driedcranberry: 'half spoon',
         blueberry:50,
         sugar:30,
         instructions: 'add 1 spoon of ice, 1.5 for large',
