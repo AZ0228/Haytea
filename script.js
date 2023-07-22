@@ -490,6 +490,7 @@ function loadRecipe(element,name) {
 
         });
     }
+    scrollToTop();
 }
 
 function toggleDrop(element) {
@@ -685,6 +686,15 @@ function calculateTotals(element){
     
 
 }    
+
+function scrollToTop() {
+    // Scroll to the top of the page (0, 0) with smooth behavior
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+}
 
 function cashTip(){
     let cashtip = document.querySelector('#cash-tip');
