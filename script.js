@@ -411,7 +411,7 @@ const recipes = {
     },
 
 
-    coconutredbean:{
+    h5:{
         name: 'coconut red bean smoothie',
         coconutmilk: 100,
         water: 50,
