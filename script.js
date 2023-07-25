@@ -421,6 +421,14 @@ const recipes = {
         ice: '1 spoon of ice, 1.5 for large',
     },
 
+    strawberryorange:{
+        name:"strawberry orange",
+        gtea:300,
+        strawberry: 25,
+        orange: 25,
+        sugar: 20,
+    },
+
     matcha:{
         name: 'matcha refill',
         instructions:'first, in blender, tare on scale and pour 400g matcha powder from silver bag, 30g from paper bag, and add 500ml hot water. blend until smooth, meanwhile fill refill container with 1500ml hot water. Once blended, pour blender mixture into refill container and mix well'
