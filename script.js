@@ -181,10 +181,10 @@ const recipes = {
 
     b21:{
         name: 'barbie drink',
-        gtea:200,
-        wholemilk:100,
+        gtea:150,
+        wholemilk:50,
         yogurt:20,
-        cranberry:50,
+        cranberry:40,
         sugar:20,
         instructions: "crush a whole strawberry in cup before pouring drink"
     },
