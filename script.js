@@ -439,7 +439,7 @@ const recipes = {
 
     matcha:{
         name: 'matcha refill',
-        instructions:'first, in blender, tare on scale and pour 400g matcha powder from silver bag, 30g from paper bag, and add 500ml hot water. blend until smooth, meanwhile fill refill container with 1500ml hot water. Once blended, pour blender mixture into refill container and mix well'
+        instructions:'first, in blender, tare on scale and pour 400g matcha powder from silver bag, 45g from paper bag, and add 500ml hot water. blend until smooth, meanwhile fill refill container with 1500ml hot water. Once blended, pour blender mixture into refill container and mix well'
     },
 
     coconutmilk:{
