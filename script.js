@@ -61,7 +61,7 @@ const recipes = {
     b1:{
         name: 'signature milk tea',
         btea: 200,
-        sugar: 30,
+        sugar: 25,
         milk: '1 scoop',
     },
 
