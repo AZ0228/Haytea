@@ -45,6 +45,7 @@ const recipes = {
         name: 'strawberry salted cheese',
         gtea:250,
         strawberry:50,
+        freshstrawberry: '1 piece',
         sugar:30,
         instructions: 'blender 5 seconds',
     },
