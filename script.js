@@ -359,7 +359,7 @@ const recipes = {
 
     h9:{
         name: 'mocha frap',
-        coffee: 150,
+        mochapowder: '3 spoons',
         heavycream: 150,
         sugar: 20,
         instructions: 'add 1 spoon of ice, 1.5 for large',
