@@ -47,6 +47,7 @@ const recipes = {
         strawberry:50,
         freshstrawberry: '1 piece',
         sugar:30,
+        wholestrawberry: '1 piece',
         instructions: 'blender 5 seconds',
     },
 
@@ -692,9 +693,9 @@ function calculateTotals(element){
         if(purchase.textContent!=''){
             total -= parseFloat(purchase.textContent.split('$')[1]);
         }
-        if(cashtips.textContent!=''){
-            total -= parseFloat(cashtips.textContent.split('$')[1]);
-        }
+        // if(cashtips.textContent!=''){
+        //     total -= parseFloat(cashtips.textContent.split('$')[1]);
+        // }
     }
     let cashsale = document.querySelector('#cashsale');
     cashsale.textContent = 'total: ' + '$' + Math.floor(total.toFixed(2))+ ' ($'+ total.toFixed(2)+ ')';
